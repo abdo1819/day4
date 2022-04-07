@@ -1,0 +1,21 @@
+<ul id="messages"></ul>
+<form id="messageForm">
+    <input id="messageinput" autocomplete="off" />
+    <button type="submit" class="btn">Send</button>
+</form>
+<script>
+    (()=>{
+        let form = document.getElementById('messageForm');
+        let input = document.getElementById('messageinput');
+        
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            if (input.value) {
+                onSendMessage(input.value,()=>{
+                    input.value = '';
+                });
+            }
+        });
+    })()
+    
+</script>

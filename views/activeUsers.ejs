@@ -1,0 +1,19 @@
+<div class="active-user-list">
+    <h3>active players</h3>
+    <ul id="activeUsersList">
+    
+    </ul>
+</div>
+
+<script>
+    function updateActiveUserList(users){
+        var activeUsersList = document.getElementById('activeUsersList');
+        activeUsersList.innerHTML = '';
+        users.forEach(function(user){
+            var li = document.createElement('li');
+            // li.innerHTML =`${user.userID}:${user.username}`;
+            li.innerHTML =`${user.username}`;
+            activeUsersList.appendChild(li);
+        });
+    }
+</script>

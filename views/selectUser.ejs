@@ -1,0 +1,17 @@
+<form id="userSelect">
+    <input type="text" id="username" placeholder="Enter your username">
+    <button type="submit" id="submit">Submit</button>
+</form>
+<script>
+    (() => {
+        let form = document.getElementById('userSelect');
+        let input = document.getElementById('username');
+    
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            if (input.value) {
+                onUsernameSelection(input.value);
+            }
+        });
+    })()
+</script>
